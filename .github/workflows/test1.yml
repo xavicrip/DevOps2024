@@ -5,14 +5,14 @@ on: [push]
 jobs:
     hola:  
       runs-on: windows-latest
-
-        steps:
-            - name: Hola mundo
-              run: echo "Hola xavier"
-            - name: touch file
-              run: touch hola.txt
-            - name: Set text
-              run: echo "Hola Mundo" >>hola.txt
+      
+      steps:
+      - name: Hola mundo
+        run: echo "Hola xavier"
+      - name: touch file
+        run: touch hola.txt
+      - name: Set text
+        run: echo "Hola Mundo" >>hola.txt
 
     other:
         runs-on: windows-latest
