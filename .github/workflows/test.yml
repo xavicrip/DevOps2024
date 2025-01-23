@@ -5,7 +5,7 @@ on: [push]
 jobs:
     hola:  
       runs-on: windows-latest
-      
+      #Pasos
       steps:
       - name: Hola mundo
         run: echo "Hola xavier"
@@ -16,9 +16,17 @@ jobs:
 
     other:
         runs-on: windows-latest
+        #pasos encadenados
         needs: [hola]
         steps:
             - name: Checkout
               uses: actions/checkout@v4.2.2
             - name: LS
               run: dir
+      
+        # apt -get intall <name paquete>  -y = instalar paquetes
+
+            - name: Setup Node.js environment
+              uses: actions/setup-node@v4.1.0
+            - name: Node Version
+              uses: node --version
