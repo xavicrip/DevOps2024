@@ -19,4 +19,4 @@ jobs:
         needs: [hola]
         steps:
             - name: LS
-              run: ls -al
+              run: dir
